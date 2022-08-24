@@ -34,6 +34,8 @@ class DataHandling:
         df = df.replace("- -", np.nan)
         df = df.set_index("ROIC.AI | AZO")
         df = df.fillna(0)
+        df = df.replace("",0,regex=True)
+        df = df.astype(float)
         
         return df
 
