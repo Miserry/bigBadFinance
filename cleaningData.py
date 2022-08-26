@@ -20,7 +20,7 @@ class DataHandling:
     
     def read_file(ticker):
         ticker = ticker.upper()
-        df = pd.read_csv(f"{ticker}.csv")
+        df = pd.read_csv(f"{ticker}.csv", skipinitialspace=True)
         
         return df
     
